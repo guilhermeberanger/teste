@@ -1,0 +1,136 @@
+<html lang="pt-br">
+<meta charset="UTF-8">
+<script type="text/javascript" src="app.js"></script>
+<body>
+    <style>
+        form {
+            /* Apenas para centralizar o form na página */
+            margin: 0 auto;
+            width: 400px;
+            /* Para ver as bordas do formulário */
+            padding: 1em;
+            border: 1px solid #CCC;
+            border-radius: 1em;
+        }
+
+        form div+div {
+            margin-top: 1em;
+        }
+
+        label {
+            /*Para ter certeza que todas as labels tem o mesmo tamanho e estão propriamente alinhadas */
+            display: inline-block;
+            width: 90px;
+            text-align: right;
+        }
+
+        input,
+        textarea {
+            /* Para certificar-se que todos os campos de texto têm as mesmas configurações de fonte. Por padrão, textareas ter uma fonte monospace*/
+            font: 1em sans-serif;
+
+            /* Para dar o mesmo tamanho a todos os campo de texto */
+            width: 200px;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+            /* Para harmonizar o look & feel das bordas nos campos de texto*/
+            border: 1px solid #999;
+        }
+
+        input:focus,
+        textarea:focus {
+            /* Dar um pouco de destaque nos elementos ativos */
+            border-color: #000;
+        }
+
+        textarea {
+            /* Para alinhar corretamente os campos de texto de várias linhas com sua label*/
+            vertical-align: top;
+
+            /* Para dar espaço suficiente para digitar algum texto */
+            height: 5em;
+
+            /* Para permitir aos usuários redimensionarem qualquer textarea verticalmente. Ele não funciona em todos os browsers */
+            resize: vertical;
+        }
+    </style>
+
+    <form action=javascript: enviar();>
+        <fieldset style="background: EEEEEE;">
+            <legend>Calculo de Frete</legend>
+            <div>
+                <span style="width:130px;">Remetente:</span>
+                <span><input type="text" class="js-input-servicos" name="remetente" value=""></span>
+            </div>
+            <div>
+                <span style="width:130px;">Cnpj:</span>
+                <span><input type="text" class="js-input-cepOrigem" name="cnpj" value=""></span>
+            </div>
+            <div>
+                <span style="width:130px;">Destinatario:</span>
+                <span><input type="text" class="js-input-cepDestino" name="destinatario" value=""></span>
+            </div>
+            <div>
+                <span style="width:130px;">Tipo Pessoa:</span>
+                <span><input type="text" class="js-input-peso" name="Tipo" value=""></span>
+            </div>
+            <div>
+                <span style="width:130px;">Cnpj Cliente:</span>
+                <span><input type="text" class="js-input-cepOrigem" name="cnpjcli" value=""></span>
+            </div>
+            <div>
+                <span style="width:130px;">Cep:</span>
+                <span><input type="text" class="js-input-cepOrigem" name="cep" value=""></span>
+            </div>
+            <div>
+                <span style="width:130px;">Volumes:</span>
+                <span><select name="formato" size="1">
+                        <option value="1">Caixa/pacote</option>
+                        <option value="2">Rolo/prisma</option>
+                    </select>
+                </span>
+            </div>
+            <div>
+                <span style="width:130px;">Comprimento:</span>
+                <span><input type="text" class="js-input-comprimento" name="comprimento" value=""></span>
+            </div>
+            <div>
+                <span style="width:130px;">Altura:</span>
+                <span><input type="text" class="js-input-altura" name="altura" value=""></span>
+            </div>
+            <div>
+                <span style="width:130px;">Largura:</span>
+                <span><input type="text" class="js-input-largura" name="largura" value=""></span>
+            </div>
+            <div>
+                <span style="width:130px;">Diâmetro:</span>
+                <span><input type="text" class="js-input-diametro" name="diametro" value=""></span>
+            </div>
+
+            <div>
+                <span style="width:130px;">Valor declarado:</span>
+                <span><input type="text" class="js-input-valor" name="valordeclarado" value=""></span>
+            </div>
+            <div>
+                <span style="width:130px;">Código da Plataforma:</span>
+                <span><select name="avisorecebimento" size="1">
+                        <option value="S">ExemploTeste</option>
+                    </select>
+                </span>
+            </div>
+            <div>
+                <span style="width:130px;">Token:</span>
+                <span><select name="avisorecebimento" size="1">
+                        <option value="S">ExemploTeste</option>
+                    </select>
+                </span>
+            </div>
+            <div>
+                <span><input type="SUBMIT" name="BTN" value="Consultar"></span>
+            </div>
+        </fieldset>
+    </form>
+</body>
+
+</html>
